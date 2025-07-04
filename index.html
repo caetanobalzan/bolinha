@@ -13,7 +13,7 @@
             height: 300px;
             top: 300%;
             left: 300%;
-            transform: translate(-200%, -200%);
+            transform: translate(-300%, -300%);
         }
     </style>
 </head>
@@ -40,5 +40,35 @@
             bolinha.style.top = y + 'px';
         });
     </script>
+
+
+
+   <img id="inter" src="img/inter.png" alt="inter">
+
+
+   <script>
+        const inter = document.getElementById('inter');
+        let x = window.innerWidth / 2;
+        let y = window.innerHeight / 2;
+        const velocidade = 5;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'w') y -= velocidade;
+            if (e.key === 's') y += velocidade;
+            if (e.key === 'a') x -= velocidade;
+            if (e.key === 'd') x += velocidade;
+
+            // Limita dentro da tela
+            x = Math.max(25, Math.min(x, window.innerWidth - 25));
+            y = Math.max(25, Math.min(y, window.innerHeight - 25));
+
+            inter.style.left = x + 'px';
+            inter.style.top = y + 'px';
+        });
+    </script>
+
+
+
+
 </body>
 </html>
