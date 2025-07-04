@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bolinha Controlável</title>
+    <title>gremio Controlável</title>
     <style>
         body {
             margin: 0;
             overflow: hidden;
         }
-        #bolinha {
+        #gremio {
             position: absolute;
             width: 300px;
             height: 300px;
@@ -18,10 +18,10 @@
     </style>
 </head>
 <body>
-    <img id="bolinha" src="img/gremio.png" alt="Bolinha">
+    <img id="gremio" src="img/gremio.png" alt="gremio">
 
     <script>
-        const bolinha = document.getElementById('bolinha');
+        const gremio = document.getElementById('gremio');
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 2;
         const velocidade = 5;
@@ -36,8 +36,8 @@
             x = Math.max(25, Math.min(x, window.innerWidth - 25));
             y = Math.max(25, Math.min(y, window.innerHeight - 25));
 
-            bolinha.style.left = x + 'px';
-            bolinha.style.top = y + 'px';
+            gremio.style.left = x + 'px';
+            gremio.style.top = y + 'px';
         });
     </script>
 
@@ -47,7 +47,7 @@
 
 
    <script>
-        const bolinha = document.getElementById('inter');
+        const inter = document.getElementById('inter');
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 2;
         const velocidade = 5;
@@ -62,9 +62,19 @@
             x = Math.max(25, Math.min(x, window.innerWidth - 25));
             y = Math.max(25, Math.min(y, window.innerHeight - 25));
 
-            bolinha.style.left = x + 'px';
-            bolinha.style.top = y + 'px';
+            inter.style.left = x + 'px';
+            inter.style.top = y + 'px';
         });
+
+
+        #inter {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 300%;
+            left: 300%;
+            transform: translate(-300%, -300%);
+        }
     </script>
 
 
