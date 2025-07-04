@@ -47,23 +47,23 @@
 
 
    <script>
-        const inter = document.getElementById('inter');
+        const bolinha = document.getElementById('inter');
         let x = window.innerWidth / 2;
         let y = window.innerHeight / 2;
         const velocidade = 5;
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'w') y -= velocidade;
-            if (e.key === 's') y += velocidade;
-            if (e.key === 'a') x -= velocidade;
-            if (e.key === 'd') x += velocidade;
+            if (e.key === 'W') y -= velocidade;
+            if (e.key === 'S') y += velocidade;
+            if (e.key === 'A') x -= velocidade;
+            if (e.key === 'D') x += velocidade;
 
             // Limita dentro da tela
             x = Math.max(25, Math.min(x, window.innerWidth - 25));
             y = Math.max(25, Math.min(y, window.innerHeight - 25));
 
-            inter.style.left = x + 'px';
-            inter.style.top = y + 'px';
+            bolinha.style.left = x + 'px';
+            bolinha.style.top = y + 'px';
         });
     </script>
 
